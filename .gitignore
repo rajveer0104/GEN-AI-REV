@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 text_db
 text_db1
+chroma_db/
