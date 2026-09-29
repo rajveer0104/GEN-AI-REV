@@ -1,0 +1,24 @@
+Deep learning is a subset of machine learning based on artificial neural networks with multiple layers (hence "deep").
+ Unlike classical machine learning, which relies heavily on manual feature engineering, deep learning models learn hierarchical representations directly from raw data—progressing from low-level edges and textures to high-level abstract concepts.
+Core Building BlocksEvery deep learning model is composed of a few fundamental components:Artificial Neuron (Perceptron): Computes a weighted sum of inputs plus a bias term, then passes the result through an activation function:$$z = \sum_{i=1}^{n} w_i x_i + b, \quad a = \sigma(z)$$
+Activation Functions: Introduce non-linearity so networks can approximate complex, non-linear mappings.
+ReLU (Rectified Linear Unit): $f(x) = \max(0, x)$, standard for hidden layers due to computational efficiency and reduced gradient vanishing.
+Sigmoid & Tanh: Smooth, bounded activations; often used for binary targets or gated recurrence.
+Softmax: Normalizes an output vector into a probability distribution for multi-class classification.
+Loss Functions: Measure the discrepancy between predictions $\hat{y}$ and true labels $y$. 
+Common examples include Mean Squared Error (MSE) for regression and Categorical Cross-Entropy for multi-class classification.
+How Neural Networks LearnTraining a neural network is an iterative optimization process consisting of three key steps:
+Forward Propagation: Input data flows forward through each layer via matrix multiplications and non-linear activations to produce a prediction and compute the overall loss.
+Backpropagation: Using the multivariate chain rule, the network computes the gradient of the loss function with respect to every weight and bias:$$\frac{\partial \mathcal{L}}{\partial w} = \frac{\partial \mathcal{L}}{\partial a} \cdot \frac{\partial a}{\partial z} \cdot \frac{\partial z}{\partial w}$$
+Optimization: An optimization algorithm updates the parameters in the opposite direction of the gradients to minimize loss:
+Stochastic Gradient Descent (SGD): Updates parameters incrementally using small batches.
+Adaptive Optimizers (Adam, RMSProp): Dynamically adjust per-parameter learning rates using running averages of first and second gradient moments.
+Key ArchitecturesArchitecturePrimary Data ModalityKey Mechanism / StrengthTypical Use CasesFeedforward (MLP)Tabular, structured vectorsFully connected linear layers + activationsBasic classification, regressionConvolutional (CNN)Images, spatial gridsParameter sharing, translation invariance via convolutions and poolingObject detection, segmentationRecurrent (RNN, LSTM, GRU)Sequential, time-seriesRecurrent hidden state loops; gating prevents vanishing gradientsSignal processing, legacy NLPTransformersText, multimodal, audio, visionMulti-Head Self-Attention ($O(N^2)$ interaction modeling without recurrence)LLMs, Vision Transformers (ViT), speech modelsGenerative (GANs, Diffusion)Unstructured synthesisAdversarial min-max game or progressive score-based denoisingImage synthesis, text-to-image, video generationRegularization & Training TechniquesDeep models have millions (or billions) of parameters, making overfitting a constant concern.
+ Standard techniques include:Batch & Layer Normalization: Normalizes layer inputs across batch or channel dimensions to stabilize internal covariate shift and accelerate convergence.
+Dropout: Randomly deactivates a fraction of neurons during training, forcing redundant, robust feature representations.
+Weight Decay ($L_2$ Regularization): Adds a penalty proportional to the squared magnitude of weights to prevent extreme values.
+Data Augmentation: Artificially expands training variety (crops, flips, noise, masking) to improve out-of-distribution generalization.
+Residual Connections (ResNets): Skips layers ($x + F(x)$), allowing gradients to propagate directly through very deep networks without vanishing.
+Gradient Descent:It tries to minimize the error
+Gradient Descent:It is an optimization algorithm
+Gradient Descent:It is an optimization algorithm that tries to minimize the error

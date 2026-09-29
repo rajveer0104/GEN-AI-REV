@@ -19,3 +19,33 @@ huggingface-hub
 sentence-transformers
 
 streamlit
+
+
+langchain-core
+# LLM Providers
+
+langchain-mistralai
+mistralai
+# Vector Database
+chromadb
+# Embedding Models
+sentence-transformers
+# Document Loaders dependencies
+pypdf
+unstructured
+beautifulsoup4
+lxml
+# Text Processing
+tiktoken
+# Data Handling
+pandas
+numpy
+# Utilities
+tqdm
+requests
+
+fonttools
+
+langchain-voyageai
+
+arxiv
